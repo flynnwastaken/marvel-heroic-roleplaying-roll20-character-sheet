@@ -1,237 +1,561 @@
-<!-- adding elements and changing formatting //-->
+<div>
+    <button class="tabswitcher" name="act_stats" type="action" >
+      Stats
+    </button>
+    <button class="tabswitcher" name="act_details" type="action" >
+      Character Details
+    </button>
+</div>
 
-<h1>Hero Name</h1>
+<input class="sheet-tabstoggle" name="attr_sheetTab" type="hidden" value="character" />
 
-  <input type="text" name="attr_heroname" />
+<div class="stats" >
+  <!-- adding buttons and dice pool features REJIGGER POWER SET TO INCLUDE FLEXIBLE #of POWER SETS //-->
 
-<h1>Power Points</h1>
+  <div class="heroname" >
+    <h1>Hero Name</h1>
+  </div>
+  <div class="heroname_query" >
+      <input class="name" name="attr_heroname" type="text" />
+  </div>
 
-  <input type="number" name="attr_pp" min="0" />
+  <div class="powerpoints" >
+    <h2>Power Points</h2>
+  </div>
+  <div class="ppcounter" >
+      <input class="incrementer" name="attr_pp" min="0" placeholder="0" type="number" />
+  </div>
 
-<!-- Current Dice Pool //-->
-<!-- Clear Dice Pool button //-->
-<!-- Roll Dice Pool button //-->
+  <div class="dicepool" >
+    <h2>Dice Pool</h2>
+  </div>
 
-<h1>Distinctions:</h1>
+    <div class="d4roll" >
+      <button name="d4roll" type="roll" value="/roll d4" >
+        D4
+      </button>
+        <input class="incrementer" name="attr_d4pool" min="0" placeholder="0" type="number" />
+    </div>
+    <div class="d6roll" >
+      <button name="d6roll" type="roll" value="/roll d6" >
+        D6
+      </button>
+        <input class="incrementer" name="attr_d6pool" min="0" placeholder="0" type="number" />
+    </div>
+    <div class="d8roll" >
+      <button name="d8roll" type="roll" value="/roll d8" >
+        D8
+      </button>
+        <input class="incrementer" name="attr_d8pool" min="0" placeholder="0" type="number" />
+    </div>
+    <div class="d10roll" >
+      <button name="d10roll" type="roll" value="/roll d10" >
+        D10
+      </button>
+        <input class="incrementer" name="attr_d10pool" min="0" placeholder="0" type="number" />
+    </div>
+    <div class="d12roll" >
+      <button name="d12roll" type="roll" value="/roll d12" >
+        D12
+      </button>
+        <input class="incrementer" name="attr_d12pool" min="0" placeholder="0" type="number" />
+    </div>
 
-  <input type="text" name="attr_dis1" />
-  <input type="text" name="attr_dis2" />
-  <input type="text" name="attr_dis3" />
+    <div class="poolbuttons" >
+      <button name="clearpool" type="action" value="<!-- Clear Dice Pool //-->" >
+        Clear
+      </button>
+      <p></p>
+      <button name="rollpool" type="action" value="<!-- Roll Current Dice Pool //-->" >
+        Roll Pool
+      </button>
+    </div>
 
-  <!-- button that adds a d4 to the dice pool and increments PP up 1 //-->
-  <!-- button that adds a d8 to the dice pool //-->
+    <div class="distinctions" >
+      <h2>Distinctions</h2>
+    </div>
 
-<h1>Affiliations:</h1>
+      <div class="dis1" >
+        <input name="attr_dis1" type="text" />
+      </div>
+      <div class="dis2" >
+        <input name="attr_dis2" type="text" />
+      </div>
+      <div class="dis3" >
+        <input name="attr_dis3" type="text" />
+      </div>
 
-    <strong>Solo</strong>
-      <select name="attr_solo" class="affiliation">
-        <option value="d6">d6</option>
-        <option value="d8">d8</option>
-        <option value="d10">d10</option>
-      </select>
+      <div class="d4distinction">
+        <button name="d4distinction" type="action" value="<!-- add D4 to DP and increment PP up 1 //-->" >
+          Add D4, +1PP
+        </button>
+      </div>
 
-    <!-- button that adds a dR to the dice pool //-->
+      <div class="d8distinction">
+        <button name="d8distinction" type="action" value="<!-- add D8 to DP //-->" >
+          Add D8
+        </button>
+      </div>
 
-    <strong>Buddy</strong>
-      <select name="attr_buddy" class="affiliation">
-        <option value="d6">d6</option>
-        <option value="d8">d8</option>
-        <option value="d10">d10</option>
-      </select>
+      <div class="affiliations">
+        <h2>Affiliations</h2>
+      </div>
 
-    <!-- button that adds a dR to the dice pool //-->
+        <div class="solo"
+          <strong>Solo</strong>
+            <select name="attr_solo">
+              <option value="d6">d6</option>
+              <option value="d8">d8</option>
+              <option value="d10">d10</option>
+            </select>
+        </div>
 
-    <strong>Team</strong>
-      <select name="attr_team" class="affiliation">
-        <option value="d6">d6</option>
-        <option value="d8">d8</option>
-        <option value="d10">d10</option>
-      </select>
+        <div class="buddy">
+          <strong>Buddy</strong>
+            <select name="attr_buddy">
+              <option value="d6">d6</option>
+              <option value="d8">d8</option>
+              <option value="d10">d10</option>
+            </select>
+        </div>
 
-    <!-- button that adds a dR to the dice pool //-->
+        <div class="team"
+          <strong>Team</strong>
+            <select name="attr_team">
+              <option value="d6">d6</option>
+              <option value="d8">d8</option>
+              <option value="d10">d10</option>
+            </select>
+        </div>
 
-<h1>Stress:</h1>
+        <div class="d6affiliaton">
+          <button name="d6add" type="action" value="<!-- add D6 to DP //-->" >
+            Add D6
+          </button>
+        </div>
 
-  <strong>Physical</strong>
-    <select name="attr_pstress" class="stress">
-      <option value="0">0</option>
-      <option value="d4">d4</option>
-      <option value="d6">d6</option>
-      <option value="d8">d8</option>
-      <option value="d10">d10</option>
-      <option value="d12">d12</option>
-      <option value="Out">Out</option>
-    </select>
+        <div class="d8affiliation">
+          <button name="d8add" type="action" value="<!-- add D8 to DP //-->" >
+            Add D8
+          </button>
+        </div>
 
-  <strong>Mental</strong>
-    <select name="attr_mstress" class="stress">
-      <option value="0">0</option>
-      <option value="d4">d4</option>
-      <option value="d6">d6</option>
-      <option value="d8">d8</option>
-      <option value="d10">d10</option>
-      <option value="d12">d12</option>
-      <option value="Out">Out</option>
-    </select>
+        <div class="d10affiliation">
+          <button name="d10add" type="action" value="<!-- add D10 to DP //-->" >
+            Add D10
+          </button>
+        </div>
 
-  <strong>Emotional</strong>
-    <select name="attr_estress" class="stress">
-      <option value="0">0</option>
-      <option value="d4">d4</option>
-      <option value="d6">d6</option>
-      <option value="d8">d8</option>
-      <option value="d10">d10</option>
-      <option value="d12">d12</option>
-      <option value="Out">Out</option>
-    </select>
+  <div class="stress">
+    <h2>Stress</h2>
+  </div>
 
-<h1>Trauma:</h1>
+    <div class="pstress">
+      <strong>Physical</strong>
+        <select name="attr_pstress">
+          <option value="0">0</option>
+          <option value="d4">d4</option>
+          <option value="d6">d6</option>
+          <option value="d8">d8</option>
+          <option value="d10">d10</option>
+          <option value="d12">d12</option>
+          <option value="Out">Out</option>
+        </select>
+    </div>
 
-  <strong>Physical</strong>
-    <select name="attr_ptrauma" class="trauma">
-      <option value="0">0</option>
-      <option value="d4">d4</option>
-      <option value="d6">d6</option>
-      <option value="d8">d8</option>
-      <option value="d10">d10</option>
-      <option value="d12">d12</option>
-      <option value="Dead">Dead</option>
-    </select>
+    <div class="mstress">
+      <strong>Mental</strong>
+        <select name="attr_mstress">
+          <option value="0">0</option>
+          <option value="d4">d4</option>
+          <option value="d6">d6</option>
+          <option value="d8">d8</option>
+          <option value="d10">d10</option>
+          <option value="d12">d12</option>
+          <option value="Out">Out</option>
+        </select>
+    </div>
 
-  <strong>Mental</strong>
-    <select name="attr_mtrauma" class="trauma">
-      <option value="0">0</option>
-      <option value="d4">d4</option>
-      <option value="d6">d6</option>
-      <option value="d8">d8</option>
-      <option value="d10">d10</option>
-      <option value="d12">d12</option>
-      <option value="Dead">Dead</option>
-    </select>
+    <div class="estress">
+      <strong>Emotional</strong>
+        <select name="attr_estress">
+          <option value="0">0</option>
+          <option value="d4">d4</option>
+          <option value="d6">d6</option>
+          <option value="d8">d8</option>
+          <option value="d10">d10</option>
+          <option value="d12">d12</option>
+          <option value="Out">Out</option>
+        </select>
+    </div>
 
-  <strong>Emotional</strong>
-    <select name="attr_etrauma" class="trauma">
-      <option value="0">0</option>
-      <option value="d4">d4</option>
-      <option value="d6">d6</option>
-      <option value="d8">d8</option>
-      <option value="d10">d10</option>
-      <option value="d12">d12</option>
-      <option value="Dead">Dead</option>
-    </select>
+  <div class="trauma">
+    <h2>Trauma</h2>
+  </div>
 
-<h1>Power Sets:</h1>
+    <div class="ptrauma">
+      <strong>Physical</strong>
+        <select name="attr_ptrauma">
+          <option value="0">0</option>
+          <option value="d4">d4</option>
+          <option value="d6">d6</option>
+          <option value="d8">d8</option>
+          <option value="d10">d10</option>
+          <option value="d12">d12</option>
+          <option value="Dead">Dead</option>
+        </select>
+    </div>
 
-  <input type="text" name="attr_ps1" placeholder="Power Set 1" class="name" />
+    <div class="mtrauma">
+      <strong>Mental</strong>
+        <select name="attr_mtrauma">
+          <option value="0">0</option>
+          <option value="d4">d4</option>
+          <option value="d6">d6</option>
+          <option value="d8">d8</option>
+          <option value="d10">d10</option>
+          <option value="d12">d12</option>
+          <option value="Dead">Dead</option>
+        </select>
+    </div>
 
-    <fieldset class="repeating_pow1">
+    <div class="etrauma">
+      <strong>Emotional</strong>
+        <select name="attr_etrauma">
+          <option value="0">0</option>
+          <option value="d4">d4</option>
+          <option value="d6">d6</option>
+          <option value="d8">d8</option>
+          <option value="d10">d10</option>
+          <option value="d12">d12</option>
+          <option value="Dead">Dead</option>
+        </select>
+    </div>
 
-      <select name="attr_p1" class="pow1">
-        <option value="d6">Minor</option>
-        <option value="d8">Enhanced</option>
-        <option value="d10">Superhuman</option>
-        <option value="d12">Godlike</option>
-      </select>
-      <input type="text" name="attr_power1" placeholder="Power Name" />
+  <div class="powersets">
+    <h2>Power Sets</h2>
+  </div>
 
-      <!-- button that adds a dR to the dice pool //-->
+    <div class="psname1">
+      <input type="text" name="attr_psname1" placeholder="Power Set 1" class="name" />
+    </div>
 
-    </fieldset>
+      <div class="levelpower1"
+        <fieldset class="repeating_pow1">
 
-    <strong>SFX:</strong>
+          <select name="attr_level1">
+            <option value="d6">D6 - Minor</option>
+            <option value="d8">D8 - Enhanced</option>
+            <option value="d10">D10 - Superhuman</option>
+            <option value="d12">D12 - Godlike</option>
+          </select>
 
-      <fieldset class="repeating_sfx1">
-        <input type="text" name="attr_sfx1" class="sub_name" placeholder="SFX Name" />
-        <input type="text" name="attr_sfx_desc1" class="description" placeholder="SFX Description" />
-      </fieldset>
-
-    <strong>Limit:</strong>
-
-      <fieldset class="repeating_limit1">
-        <input type="text" name="attr_limit1" class="sub_name" placeholder="Limit Name" />
-        <input type="text" name="attr_limit_desc1" class="description" placeholder="Limit Description" />
-        <!-- button that increments PP up 1 //-->
-      </fieldset>
-
-  <input type="text" name="attr_ps2" placeholder="Power Set 2" class="name" />
-
-    <fieldset class="repeating_pow2">
-      <select name="attr_p2" class="dtype">
-        <option value="d6">Minor</option>
-        <option value="d8">Enhanced</option>
-        <option value="d10">Superhuman</option>
-        <option value="d12">Godlike</option>
-      </select>
-      <input type="text" name="attr_power2" placeholder="Power Name" />
-
-      <!-- button that adds a dR to the dice pool //-->
-
-    </fieldset>
-
-      <strong>SFX:</strong>
-
-        <fieldset class="repeating_sfx2">
-          <input type="text" name="attr_sfx2" class="sub_name" placeholder="SFX Name" />
-          <input type="text" name="attr_sfx_desc2" class="description" placeholder="SFX Description" />
+          <input name="attr_power1" placeholder="Power Name" type="text" />
         </fieldset>
+      </div>
 
-      <strong>Limit:</strong>
+      <div class="powerbutton1">
+        <button name="d6add" type="action" value="<!-- add D6 to DP //-->" >
+          Add D6
+        </button>
 
-        <fieldset class="repeating_limit2">
-          <input type="text" name="attr_limit2" class="sub_name" placeholder="Limit Name" />
-          <input type="text" name="attr_limit_desc2" class="description" placeholder="Limit Description" />
-          <!-- button that increments PP up 1 //-->
+        <button name="d8add" type="action" value="<!-- add D8 to DP //-->" >
+          Add D8
+        </button>
+        <button name="d10add" type="action" value="<!-- add D10 to DP //-->" >
+          Add D10
+        </button>
+        <button name="d12add" type="action" value="<!-- add D12 to DP //-->" >
+          Add D12
+        </button>
+      </div>
+
+        <div class="sfx1">
+          <strong>SFX:</strong>
+
+            <fieldset class="repeating_sfx1">
+              <input type="text" name="attr_sfx1" class="sub_name" placeholder="SFX Name" />
+              <input type="text" name="attr_sfx_desc1" class="description" placeholder="SFX Description" />
+            </fieldset>
+        </div>
+
+        <div class="limit1">
+          <strong>Limit:</strong>
+
+            <fieldset class="repeating_limit1">
+              <input type="text" name="attr_limit1" class="sub_name" placeholder="Limit Name" />
+              <input type="text" name="attr_limit_desc1" class="description" placeholder="Limit Description" />
+
+              <button name="addpp" type="action" value="<!-- increment PP up 1 //-->" >
+                +1PP
+              </button>
+            </fieldset>
+        </div>
+
+    <div class="psname2">
+      <input type="text" name="attr_psname2" placeholder="Power Set 2" class="name" />
+    </div>
+
+      <div class="levelpower2">
+        <fieldset class="repeating_pow2">
+          <select name="attr_level2">
+            <option value="d6">D6 - Minor</option>
+            <option value="d8">D8 - Enhanced</option>
+            <option value="d10">D10 - Superhuman</option>
+            <option value="d12">D12 - Godlike</option>
+          </select>
+
+          <input name="attr_power2" placeholder="Power Name" type="text" />
         </fieldset>
+      </div>
 
-<h1>Specialties:</h1>
+      <div class="powerbutton2">
+        <button name="d6add" type="action" value="<!-- add D6 to DP //-->" >
+          Add D6
+        </button>
+        <button name="d8add" type="action" value="<!-- add D8 to DP //-->" >
+          Add D8
+        </button>
+        <button name="d10add" type="action" value="<!-- add D10 to DP //-->" >
+          Add D10
+        </button>
+        <button name="d12add" type="action" value="<!-- add D12 to DP //-->" >
+          Add D12
+        </button>
+      </div>
 
-  <fieldset class="repeating_spec1">
+        <div class="sfx2">
+          <strong>SFX:</strong>
 
-	  <select name="attr_spec1" class="specialty">
-      <option>Acrobatic</option>
-      <option>Business</option>
-      <option>Combat</option>
-      <option>Cosmic</option>
-      <option>Covert</option>
-      <option>Crime</option>
-      <option>Medical</option>
-      <option>Menace</option>
-      <option>Mystic</option>
-      <option>Psych</option>
-      <option>Science</option>
-      <option>Tech</option>
-      <option>Vehicle</option>
-    </select>
+            <fieldset class="repeating_sfx2">
+              <input type="text" name="attr_sfx2" class="sub_name" placeholder="SFX Name" />
+              <input type="text" name="attr_sfx_desc2" class="description" placeholder="SFX Description" />
+            </fieldset>
+        </div>
 
-    <select name="attr_rating1" class="specialty">
-      <option value="d8">Expert</option>
-      <option value="d10">Master</option>
-    </select>
+        <div class="limit2">
+          <strong>Limit:</strong>
 
-    <!-- button that adds a dR to the dice pool //-->
+            <fieldset class="repeating_limit2">
+              <input type="text" name="attr_limit2" class="sub_name" placeholder="Limit Name" />
+              <input type="text" name="attr_limit_desc2" class="description" placeholder="Limit Description" />
 
-  </fieldset>
+              <button name="addpp" type="action" value="<!-- increment PP up 1 //-->" >
+                +1PP
+              </button>
+            </fieldset>
+        </div>
 
-<h1>Milestones:</h1>
+  <div class="specialties">
+    <h2>Specialties</h2>
+  </div>
 
-  <input type="text" name="attr_milestone1" placeholder="Milestone Name" /><br />
+    <div class="specrating">
+      <fieldset class="repeating_spec1">
 
-  <strong>1 XP: </strong><!-- button that increments XP up 1 //-->
-    <input type="text" name="attr_trigger11" /><br />
-  <strong>3 XP: </strong><!-- button that increments XP up 3 //-->
-    <input type="text" name="attr_trigger13" /><br />
-  <strong>10 XP: </strong><!-- button that increments XP up 10 //-->
-    <input type="text" name="attr_trigger110" /><br />
+        <select name="attr_spec1">
+          <option>Acrobatic</option>
+          <option>Business</option>
+          <option>Combat</option>
+          <option>Cosmic</option>
+          <option>Covert</option>
+          <option>Crime</option>
+          <option>Medical</option>
+          <option>Menace</option>
+          <option>Mystic</option>
+          <option>Psych</option>
+          <option>Science</option>
+          <option>Tech</option>
+          <option>Vehicle</option>
+        </select>
 
-  <input type="text" name="attr_milestone2" placeholder="Milestone Name" /><br />
+        <select name="attr_rating1">
+          <option value="d8">Expert - D8 / 2D6</option>
+          <option value="d10">Master - D10 / 2D8 / 3D6</option>
+        </select>
+      </fieldset>
+    </div>
 
-  <strong>1 XP: </strong><!-- button that increments XP up 1 //-->
-    <input type="text" name="attr_trigger21" /><br />
-  <strong>3 XP: </strong><!-- button that increments XP up 3 //-->
-    <input type="text" name="attr_trigger23" /><br />
-  <strong>10 XP: </strong><!-- button that increments XP up 10 //-->
-    <input type="text" name="attr_trigger210" />
+    <div class="specdice">
+      <button name="d8add" type="action" value="<!-- add D8 to DP //-->" >
+        Add D8
+      </button>
+      <button name="2d6add" type="action" value="<!-- add 2D6 to DP //-->" >
+        Add 2D6
+      </button>
+      <button name="d10add" type="action" value="<!-- add D10 to DP //-->" >
+        Add D10
+      </button>
+      <button name="2d8add" type="action" value="<!-- add 2D8 to DP //-->" >
+        Add 2D8
+      </button>
+      <button name="3d6add" type="action" value="<!-- add 3D6 to DP //-->" >
+        Add 3D6
+      </button>
+    </div>
 
-<h1>Experience Points</h1>
+  <div class="push">
+    <h2>Push Dice</h2>
+  </div>
 
-  <input type="number" name="attr_xp" min="0"/>
+    <div class="pushdice">
+      <button name="push" type="action" value="<!-- add D6 to DP and increment PP down 1 //-->" >
+        Push: Add D6, -1PP
+      </button>
+      <button name="opppush" type="action" value="<!-- add D8 to DP and increment PP down 1 //-->" >
+        Opportunity Push: Add D8, -1PP
+      </button>
+    </div>
+
+  <div class="stunt">
+    <h2>Stunts</h2>
+  </div>
+
+    <div class="stuntdice">
+      <button name="stunt" type="action" value="<!-- add D8 to DP and increment PP down 1 //-->" >
+        Stunt: Add D8, -1PP
+      </button>
+      <button name="oppstunt" type="action" value="<!-- add D10 to DP and increment PP down 1 //-->" >
+        Opportunity Stunt: Add D10, -1PP
+      </button>
+    </div>
+
+  <div class="resources">
+    <h2>Resources</h2>
+  </div>
+
+    <div class="resourcenames">
+      <fieldset class="repeating_resource">
+        <input type="text" name="attr_resource" class="sub_name" placeholder="Resource Name" />
+        <input type="text" name="attr_resource" class="description" placeholder="Resource Description" />
+      </fieldset>
+    </div>
+
+    <div class="resourcebuttons">
+      <button name="createresource" type="action" value="<!-- increment PP down 1 //-->" >
+        Create Resource: -1PP
+      </button>
+      <button name="expertresource" type="action" value="<!-- add D6 to DP //-->" >
+        Expert Resource: Add D6
+      </button>
+      <button name="masterresource" type="action" value="<!-- add D8 to DP //-->" >
+        Master Resource: Add D8
+      </button>
+    </div>
+
+  <div class="milestones">
+    <h2>Milestones</h2>
+  </div>
+
+    <div class="msname1">
+      <input class="sub_name" name="attr_milestone1" placeholder="Milestone Name" type="text" />
+    </div>
+
+    <div class="1xpbutton1">
+      <button name="1XP" type="action" value="<!-- increment XP up 1 //-->" >
+        +1XP
+      </button>
+    </div>
+    <div class="trigger11">
+      <input type="text" name="attr_trigger11" />
+    </div>
+    <div class="3xpbutton1">
+      <button name="3XP" type="action" value="<!-- increment XP up 3 //-->" >
+        +3XP
+      </button>
+    </div>
+    <div class="trigger13">
+      <input type="text" name="attr_trigger13" />
+    </div>
+    <div class="10xpbutton1">
+      <button name="10XP" type="action" value="<!-- increment XP up 10 //-->" >
+        +10XP
+      </button>
+    </div>
+    <div class=trigger110">
+      <input type="text" name="attr_trigger110" />
+    </div>
+
+    <div class="msname2">
+      <input class="name" name="attr_milestone2" placeholder="Milestone Name" type="text" />
+    </div>
+
+    <div class="1xpbutton2">
+      <button name="1XP" type="action" value="<!-- increment XP up 1 //-->" >
+        +1XP
+      </button>
+    </div>
+    <div class="trigger21">
+      <input type="text" name="attr_trigger21" />
+    </div>
+    <div class="3xpbutton2">
+      <button name="3XP" type="action" value="<!-- increment XP up 3 //-->" >
+        +3XP
+      </button>
+    </div>
+    <div class="trigger23">
+      <input type="text" name="attr_trigger23" />
+    </div>
+    <div class="10xpbutton2">
+      <button name="10XP" type="action" value="<!-- increment XP up 10 //-->" >
+        +10XP
+      </button>
+    </div>
+    <div class="trigger210">
+      <input type="text" name="attr_trigger210" />
+    </div>
+
+  <div class="xp">
+    <h2>Experience Points</h2>
+  </div>
+
+    <div class="xpcounter">
+      <input class="incrementer" name="attr_xp" min="0" placeholder="0" type="number" />
+    </div>
+
+    <div class="buypp">
+      <button name="buypp" type="action" value="<!-- increment XP down 1 and PP up 1 //-->" >
+        1XP -> 1PP
+      </button>
+    </div>
+</div>
+
+<div class="details">
+  <div>
+    <input id="secret" name="attr_secret" type="radio" value="secret" checked />
+    <label for="secret">Secret</label>
+  </div>
+  <div>
+    <input id="public" name="attr_secret" type="radio" value="public" />
+    <label for="public">Public</label>
+  </div>
+  <div>
+    <input type="text" name="attr_identity" placeholder="Identity" />
+  </div>
+
+  <div>
+    <h2>History</h2>
+    <input type="text" name="attr_history" />
+  </div>
+
+  <div>
+    <h2>Personality</h2>
+    <input type="text" name="attr_personality" />
+  </div>
+
+  <div>
+    <h2>Abilities & Resources</h2>
+    <input type="text" name="attr_abilities_resources" />
+  </div>
+</div>
+
+<script type="text/worker">
+    const buttonlist = ["stats","details"];
+    buttonlist.forEach(button => {
+        on(`clicked:${button}`, function() {
+            setAttrs({
+                sheetTab: button
+            });
+        });
+    });
+</script>
