@@ -62,11 +62,11 @@
     </div>
 
     <div class="poolbuttons" >
-      <button name="clearpool" type="action" value="<!-- Clear Dice Pool //-->" >
+      <button name="act_clearpool" type="action" value="<!-- Clear Dice Pool //-->" >
         Clear
       </button>
       <p></p>
-      <button name="rollpool" type="action" value="<!-- Roll Current Dice Pool //-->" >
+      <button name="rollpool" type="roll" value="/roll [[0+@{d4pool}]]d4 + [[0+@{d6pool}]]d6 + [[0+@{d8pool}]]d8 + [[0+@{d10pool}]]d10 + [[0+@{d12pool}]]d12" >
         Roll Pool
       </button>
     </div>
@@ -86,13 +86,13 @@
       </div>
 
       <div class="d4distinction">
-        <button name="d4distinction" type="action" value="<!-- add D4 to DP and increment PP up 1 //-->" >
+        <button name="act_d4distinction" type="action" value="<!-- add D4 to DP and increment PP up 1 //-->" >
           Add D4, +1PP
         </button>
       </div>
 
       <div class="d8distinction">
-        <button name="d8distinction" type="action" value="<!-- add D8 to DP //-->" >
+        <button name="act_d8add" type="action" value="<!-- add D8 to DP //-->" >
           Add D8
         </button>
       </div>
@@ -129,19 +129,19 @@
         </div>
 
         <div class="d6affiliaton">
-          <button name="d6add" type="action" value="<!-- add D6 to DP //-->" >
+          <button name="act_d6add" type="action" value="<!-- add D6 to DP //-->" >
             Add D6
           </button>
         </div>
 
         <div class="d8affiliation">
-          <button name="d8add" type="action" value="<!-- add D8 to DP //-->" >
+          <button name="act_d8add" type="action" value="<!-- add D8 to DP //-->" >
             Add D8
           </button>
         </div>
 
         <div class="d10affiliation">
-          <button name="d10add" type="action" value="<!-- add D10 to DP //-->" >
+          <button name="act_d10add" type="action" value="<!-- add D10 to DP //-->" >
             Add D10
           </button>
         </div>
@@ -255,17 +255,17 @@
       </div>
 
       <div class="powerbutton1">
-        <button name="d6add" type="action" value="<!-- add D6 to DP //-->" >
+        <button name="act_d6add" type="action" value="<!-- add D6 to DP //-->" >
           Add D6
         </button>
 
-        <button name="d8add" type="action" value="<!-- add D8 to DP //-->" >
+        <button name="act_d8add" type="action" value="<!-- add D8 to DP //-->" >
           Add D8
         </button>
-        <button name="d10add" type="action" value="<!-- add D10 to DP //-->" >
+        <button name="act_d10add" type="action" value="<!-- add D10 to DP //-->" >
           Add D10
         </button>
-        <button name="d12add" type="action" value="<!-- add D12 to DP //-->" >
+        <button name="act_d12add" type="action" value="<!-- add D12 to DP //-->" >
           Add D12
         </button>
       </div>
@@ -286,7 +286,7 @@
               <input type="text" name="attr_limit1" class="sub_name" placeholder="Limit Name" />
               <input type="text" name="attr_limit_desc1" class="description" placeholder="Limit Description" />
 
-              <button name="addpp" type="action" value="<!-- increment PP up 1 //-->" >
+              <button name="act_addpp" type="action" value="<!-- increment PP up 1 //-->" >
                 +1PP
               </button>
             </fieldset>
@@ -310,16 +310,16 @@
       </div>
 
       <div class="powerbutton2">
-        <button name="d6add" type="action" value="<!-- add D6 to DP //-->" >
+        <button name="act_d6add" type="action" value="<!-- add D6 to DP //-->" >
           Add D6
         </button>
-        <button name="d8add" type="action" value="<!-- add D8 to DP //-->" >
+        <button name="act_d8add" type="action" value="<!-- add D8 to DP //-->" >
           Add D8
         </button>
-        <button name="d10add" type="action" value="<!-- add D10 to DP //-->" >
+        <button name="act_d10add" type="action" value="<!-- add D10 to DP //-->" >
           Add D10
         </button>
-        <button name="d12add" type="action" value="<!-- add D12 to DP //-->" >
+        <button name="act_d12add" type="action" value="<!-- add D12 to DP //-->" >
           Add D12
         </button>
       </div>
@@ -340,7 +340,7 @@
               <input type="text" name="attr_limit2" class="sub_name" placeholder="Limit Name" />
               <input type="text" name="attr_limit_desc2" class="description" placeholder="Limit Description" />
 
-              <button name="addpp" type="action" value="<!-- increment PP up 1 //-->" >
+              <button name="act_addpp" type="action" value="<!-- increment PP up 1 //-->" >
                 +1PP
               </button>
             </fieldset>
@@ -377,19 +377,19 @@
     </div>
 
     <div class="specdice">
-      <button name="d8add" type="action" value="<!-- add D8 to DP //-->" >
+      <button name="act_d8add" type="action" value="<!-- add D8 to DP //-->" >
         Add D8
       </button>
-      <button name="2d6add" type="action" value="<!-- add 2D6 to DP //-->" >
+      <button name="act_2d6add" type="action" value="<!-- add 2D6 to DP //-->" >
         Add 2D6
       </button>
-      <button name="d10add" type="action" value="<!-- add D10 to DP //-->" >
+      <button name="act_d10add" type="action" value="<!-- add D10 to DP //-->" >
         Add D10
       </button>
-      <button name="2d8add" type="action" value="<!-- add 2D8 to DP //-->" >
+      <button name="act_2d8add" type="action" value="<!-- add 2D8 to DP //-->" >
         Add 2D8
       </button>
-      <button name="3d6add" type="action" value="<!-- add 3D6 to DP //-->" >
+      <button name="act_3d6add" type="action" value="<!-- add 3D6 to DP //-->" >
         Add 3D6
       </button>
     </div>
@@ -399,10 +399,10 @@
   </div>
 
     <div class="pushdice">
-      <button name="push" type="action" value="<!-- add D6 to DP and increment PP down 1 //-->" >
+      <button name="act_push" type="action" value="<!-- add D6 to DP and increment PP down 1 //-->" >
         Push: Add D6, -1PP
       </button>
-      <button name="opppush" type="action" value="<!-- add D8 to DP and increment PP down 1 //-->" >
+      <button name="act_opppush" type="action" value="<!-- add D8 to DP and increment PP down 1 //-->" >
         Opportunity Push: Add D8, -1PP
       </button>
     </div>
@@ -412,10 +412,10 @@
   </div>
 
     <div class="stuntdice">
-      <button name="stunt" type="action" value="<!-- add D8 to DP and increment PP down 1 //-->" >
+      <button name="act_stunt" type="action" value="<!-- add D8 to DP and increment PP down 1 //-->" >
         Stunt: Add D8, -1PP
       </button>
-      <button name="oppstunt" type="action" value="<!-- add D10 to DP and increment PP down 1 //-->" >
+      <button name="act_oppstunt" type="action" value="<!-- add D10 to DP and increment PP down 1 //-->" >
         Opportunity Stunt: Add D10, -1PP
       </button>
     </div>
@@ -432,13 +432,13 @@
     </div>
 
     <div class="resourcebuttons">
-      <button name="createresource" type="action" value="<!-- increment PP down 1 //-->" >
+      <button name="act_createresource" type="action" value="<!-- increment PP down 1 //-->" >
         Create Resource: -1PP
       </button>
-      <button name="expertresource" type="action" value="<!-- add D6 to DP //-->" >
+      <button name="act_expertresource" type="action" value="<!-- add D6 to DP //-->" >
         Expert Resource: Add D6
       </button>
-      <button name="masterresource" type="action" value="<!-- add D8 to DP //-->" >
+      <button name="act_masterresource" type="action" value="<!-- add D8 to DP //-->" >
         Master Resource: Add D8
       </button>
     </div>
@@ -452,7 +452,7 @@
     </div>
 
     <div class="1xpbutton1">
-      <button name="1XP" type="action" value="<!-- increment XP up 1 //-->" >
+      <button name="act_xp1" type="action" value="<!-- increment XP up 1 //-->" >
         +1XP
       </button>
     </div>
@@ -460,7 +460,7 @@
       <input type="text" name="attr_trigger11" />
     </div>
     <div class="3xpbutton1">
-      <button name="3XP" type="action" value="<!-- increment XP up 3 //-->" >
+      <button name="act_xp3" type="action" value="<!-- increment XP up 3 //-->" >
         +3XP
       </button>
     </div>
@@ -468,7 +468,7 @@
       <input type="text" name="attr_trigger13" />
     </div>
     <div class="10xpbutton1">
-      <button name="10XP" type="action" value="<!-- increment XP up 10 //-->" >
+      <button name="act_xp10" type="action" value="<!-- increment XP up 10 //-->" >
         +10XP
       </button>
     </div>
@@ -477,11 +477,11 @@
     </div>
 
     <div class="msname2">
-      <input class="name" name="attr_milestone2" placeholder="Milestone Name" type="text" />
+      <input class="sub_name" name="attr_milestone2" placeholder="Milestone Name" type="text" />
     </div>
 
     <div class="1xpbutton2">
-      <button name="1XP" type="action" value="<!-- increment XP up 1 //-->" >
+      <button name="act_xp1" type="action" value="<!-- increment XP up 1 //-->" >
         +1XP
       </button>
     </div>
@@ -489,7 +489,7 @@
       <input type="text" name="attr_trigger21" />
     </div>
     <div class="3xpbutton2">
-      <button name="3XP" type="action" value="<!-- increment XP up 3 //-->" >
+      <button name="act_xp3" type="action" value="<!-- increment XP up 3 //-->" >
         +3XP
       </button>
     </div>
@@ -497,7 +497,7 @@
       <input type="text" name="attr_trigger23" />
     </div>
     <div class="10xpbutton2">
-      <button name="10XP" type="action" value="<!-- increment XP up 10 //-->" >
+      <button name="act_xp10" type="action" value="<!-- increment XP up 10 //-->" >
         +10XP
       </button>
     </div>
@@ -514,48 +514,66 @@
     </div>
 
     <div class="buypp">
-      <button name="buypp" type="action" value="<!-- increment XP down 1 and PP up 1 //-->" >
+      <button name="act_buypp" type="action" >
         1XP -> 1PP
       </button>
     </div>
 </div>
 
 <div class="details">
-  <div>
+
+  <div class="secretpublic">
     <input id="secret" name="attr_secret" type="radio" value="secret" checked />
     <label for="secret">Secret</label>
-  </div>
-  <div>
+
     <input id="public" name="attr_secret" type="radio" value="public" />
     <label for="public">Public</label>
   </div>
-  <div>
-    <input type="text" name="attr_identity" placeholder="Identity" />
+
+  <div class="identity">
+    <input class="name" name="attr_identity" placeholder="Identity" type="text" />
   </div>
 
-  <div>
+  <div class="history">
     <h2>History</h2>
     <input type="text" name="attr_history" />
   </div>
 
-  <div>
+  <div class="personality">
     <h2>Personality</h2>
     <input type="text" name="attr_personality" />
-  </div>
 
-  <div>
     <h2>Abilities & Resources</h2>
     <input type="text" name="attr_abilities_resources" />
   </div>
 </div>
 
 <script type="text/worker">
-    const buttonlist = ["stats","details"];
-    buttonlist.forEach(button => {
-        on(`clicked:${button}`, function() {
-            setAttrs({
-                sheetTab: button
-            });
-        });
+
+// makes the sheet tab buttons at the top of the sheet work
+  const buttonlist = [ "stats", "details" ];
+  buttonlist.forEach(button => {
+    on(`clicked:${button}`, function() {
+      setAttrs({
+        sheetTab: button
+      });
     });
+  });
+
+// makes the "1XP -> 1PP" button work NOT WORKING
+  on("clicked:buypp", function() {
+    getAttrs(["xp", "pp"], function(values) {
+      if (xp > 0) {
+        let newXp = parseInt(values.xp,10)||0;
+        let newPp = parseInt(values.pp,10)||0;
+        --newXp;
+        ++newPp;
+        setAttrs({
+          xp: newXp,
+          pp: newPp
+        });
+      };
+    });
+  });
+
 </script>
