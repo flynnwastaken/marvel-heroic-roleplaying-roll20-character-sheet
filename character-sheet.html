@@ -9,6 +9,7 @@
 
 <input class="sheet-tabstoggle" name="attr_sheetTab" type="hidden" value="character" />
 
+
 <div class="stats" >
   <!-- adding buttons and dice pool features REJIGGER POWER SET TO INCLUDE FLEXIBLE #of POWER SETS //-->
 
@@ -62,7 +63,7 @@
     </div>
 
     <div class="poolbuttons" >
-      <button name="act_clearpool" type="action" value="<!-- Clear Dice Pool //-->" >
+      <button name="act_clearpool" type="action" >
         Clear
       </button>
       <p></p>
@@ -86,13 +87,13 @@
       </div>
 
       <div class="d4distinction">
-        <button name="act_d4distinction" type="action" value="<!-- add D4 to DP and increment PP up 1 //-->" >
+        <button name="act_d4distinction" type="action" >
           Add D4, +1PP
         </button>
       </div>
 
       <div class="d8distinction">
-        <button name="act_d8add" type="action" value="<!-- add D8 to DP //-->" >
+        <button name="act_d8add" type="action" >
           Add D8
         </button>
       </div>
@@ -129,19 +130,19 @@
         </div>
 
         <div class="d6affiliaton">
-          <button name="act_d6add" type="action" value="<!-- add D6 to DP //-->" >
+          <button name="act_d6add" type="action" >
             Add D6
           </button>
         </div>
 
         <div class="d8affiliation">
-          <button name="act_d8add" type="action" value="<!-- add D8 to DP //-->" >
+          <button name="act_d8add" type="action" >
             Add D8
           </button>
         </div>
 
         <div class="d10affiliation">
-          <button name="act_d10add" type="action" value="<!-- add D10 to DP //-->" >
+          <button name="act_d10add" type="action" >
             Add D10
           </button>
         </div>
@@ -255,17 +256,17 @@
       </div>
 
       <div class="powerbutton1">
-        <button name="act_d6add" type="action" value="<!-- add D6 to DP //-->" >
+        <button name="act_d6add" type="action" >
           Add D6
         </button>
 
-        <button name="act_d8add" type="action" value="<!-- add D8 to DP //-->" >
+        <button name="act_d8add" type="action" >
           Add D8
         </button>
-        <button name="act_d10add" type="action" value="<!-- add D10 to DP //-->" >
+        <button name="act_d10add" type="action" >
           Add D10
         </button>
-        <button name="act_d12add" type="action" value="<!-- add D12 to DP //-->" >
+        <button name="act_d12add" type="action" >
           Add D12
         </button>
       </div>
@@ -286,7 +287,7 @@
               <input type="text" name="attr_limit1" class="sub_name" placeholder="Limit Name" />
               <input type="text" name="attr_limit_desc1" class="description" placeholder="Limit Description" />
 
-              <button name="act_addpp" type="action" value="<!-- increment PP up 1 //-->" >
+              <button name="act_addpp" type="action" >
                 +1PP
               </button>
             </fieldset>
@@ -310,16 +311,16 @@
       </div>
 
       <div class="powerbutton2">
-        <button name="act_d6add" type="action" value="<!-- add D6 to DP //-->" >
+        <button name="act_d6add" type="action" >
           Add D6
         </button>
-        <button name="act_d8add" type="action" value="<!-- add D8 to DP //-->" >
+        <button name="act_d8add" type="action" >
           Add D8
         </button>
-        <button name="act_d10add" type="action" value="<!-- add D10 to DP //-->" >
+        <button name="act_d10add" type="action" >
           Add D10
         </button>
-        <button name="act_d12add" type="action" value="<!-- add D12 to DP //-->" >
+        <button name="act_d12add" type="action" >
           Add D12
         </button>
       </div>
@@ -340,7 +341,7 @@
               <input type="text" name="attr_limit2" class="sub_name" placeholder="Limit Name" />
               <input type="text" name="attr_limit_desc2" class="description" placeholder="Limit Description" />
 
-              <button name="act_addpp" type="action" value="<!-- increment PP up 1 //-->" >
+              <button name="act_addpp" type="action" >
                 +1PP
               </button>
             </fieldset>
@@ -377,19 +378,19 @@
     </div>
 
     <div class="specdice">
-      <button name="act_d8add" type="action" value="<!-- add D8 to DP //-->" >
+      <button name="act_d8add" type="action" >
         Add D8
       </button>
-      <button name="act_2d6add" type="action" value="<!-- add 2D6 to DP //-->" >
+      <button name="act_add2d6" type="action" >
         Add 2D6
       </button>
-      <button name="act_d10add" type="action" value="<!-- add D10 to DP //-->" >
+      <button name="act_d10add" type="action" >
         Add D10
       </button>
-      <button name="act_2d8add" type="action" value="<!-- add 2D8 to DP //-->" >
+      <button name="act_add2d8" type="action" >
         Add 2D8
       </button>
-      <button name="act_3d6add" type="action" value="<!-- add 3D6 to DP //-->" >
+      <button name="act_add3d6" type="action" >
         Add 3D6
       </button>
     </div>
@@ -399,10 +400,10 @@
   </div>
 
     <div class="pushdice">
-      <button name="act_push" type="action" value="<!-- add D6 to DP and increment PP down 1 //-->" >
+      <button name="act_push" type="action" >
         Push: Add D6, -1PP
       </button>
-      <button name="act_opppush" type="action" value="<!-- add D8 to DP and increment PP down 1 //-->" >
+      <button name="act_opppush" type="action" >
         Opportunity Push: Add D8, -1PP
       </button>
     </div>
@@ -412,10 +413,10 @@
   </div>
 
     <div class="stuntdice">
-      <button name="act_stunt" type="action" value="<!-- add D8 to DP and increment PP down 1 //-->" >
+      <button name="act_opppush" type="action" >
         Stunt: Add D8, -1PP
       </button>
-      <button name="act_oppstunt" type="action" value="<!-- add D10 to DP and increment PP down 1 //-->" >
+      <button name="act_oppstunt" type="action" >
         Opportunity Stunt: Add D10, -1PP
       </button>
     </div>
@@ -432,13 +433,13 @@
     </div>
 
     <div class="resourcebuttons">
-      <button name="act_createresource" type="action" value="<!-- increment PP down 1 //-->" >
+      <button name="act_createresource" type="action" >
         Create Resource: -1PP
       </button>
-      <button name="act_expertresource" type="action" value="<!-- add D6 to DP //-->" >
+      <button name="act_d6add" type="action" >
         Expert Resource: Add D6
       </button>
-      <button name="act_masterresource" type="action" value="<!-- add D8 to DP //-->" >
+      <button name="act_d8add" type="action" >
         Master Resource: Add D8
       </button>
     </div>
@@ -520,6 +521,7 @@
     </div>
 </div>
 
+
 <div class="details">
 
   <div class="secretpublic">
@@ -548,6 +550,7 @@
   </div>
 </div>
 
+
 <script type="text/worker">
 
 // makes the sheet tab buttons at the top of the sheet work
@@ -560,17 +563,220 @@
     });
   });
 
-// makes the "1XP -> 1PP" button work NOT WORKING
+// makes the "Clear Pool" button work
+  on("clicked:clearpool", function() {
+    getAttrs(["d4pool", "d6pool", "d8pool", "d10pool", "d12pool"], function(values) {
+      setAttrs({
+        d4pool: 0,
+        d6pool: 0,
+        d8pool: 0,
+        d10pool: 0,
+        d12pool: 0
+      });
+    });
+  });
+
+// makes the "d4 Distinction" button work
+  on("clicked:d4distinction", function() {
+    getAttrs(["d4pool", "pp"], function(values) {
+      let d4pool = parseInt(values.d4pool,10)||0;
+      let pp = parseInt(values.pp,10)||0;
+      ++d4pool;
+      ++pp;
+      setAttrs({
+        d4pool: d4pool,
+        pp: pp
+      });
+    });
+  });
+
+// make the various "Add XdX" buttons work
+  on("clicked:d4add", function() {
+    getAttrs(["d4pool"], function(values) {
+      let d4pool = parseInt(values.d4pool,10)||0;
+      ++d4pool;
+      setAttrs({
+        d4pool: d4pool,
+      });
+    });
+  });
+
+  on("clicked:d6add", function() {
+    getAttrs(["d6pool"], function(values) {
+      let d6pool = parseInt(values.d6pool,10)||0;
+      ++d6pool;
+      setAttrs({
+        d6pool: d6pool,
+      });
+    });
+  });
+
+  on("clicked:d8add", function() {
+    getAttrs(["d8pool"], function(values) {
+      let d8pool = parseInt(values.d8pool,10)||0;
+      ++d8pool;
+      setAttrs({
+        d8pool: d8pool,
+      });
+    });
+  });
+
+  on("clicked:d10add", function() {
+    getAttrs(["d10pool"], function(values) {
+      let d10pool = parseInt(values.d10pool,10)||0;
+      ++d10pool;
+      setAttrs({
+        d10pool: d10pool,
+      });
+    });
+  });
+
+  on("clicked:d12add", function() {
+    getAttrs(["d12pool"], function(values) {
+      let d12pool = parseInt(values.d12pool,10)||0;
+      ++d12pool;
+      setAttrs({
+        d12pool: d12pool,
+      });
+    });
+  });
+
+  on("clicked:add2d6", function() {
+    getAttrs(["d6pool"], function(values) {
+      let d6pool = parseInt(values.d6pool,10)||0;
+      d6pool = d6pool + 2;
+      setAttrs({
+        d6pool: d6pool,
+      });
+    });
+  });
+
+  on("clicked:add2d8", function() {
+    getAttrs(["d8pool"], function(values) {
+      let d8pool = parseInt(values.d8pool,10)||0;
+      d8pool = d8pool + 2;
+      setAttrs({
+        d8pool: d8pool,
+      });
+    });
+  });
+
+  on("clicked:add3d6", function() {
+    getAttrs(["d6pool"], function(values) {
+      let d6pool = parseInt(values.d6pool,10)||0;
+      d6pool = d6pool + 3;
+      setAttrs({
+        d6pool: d6pool,
+      });
+    });
+  });
+
+// make the "Limit, +1 PP" buttons work
+  on("clicked:addpp", function() {
+    getAttrs(["pp"], function(values) {
+      let pp = parseInt(values.pp,10)||0;
+      ++pp;
+      setAttrs({
+        pp: pp
+      });
+    });
+  });
+
+// make the "Push", "Opportunity Push" and "Stunt" buttons work
+  on("clicked:push", function() {
+    getAttrs(["d6pool", "pp"], function(values) {
+      let d6pool = parseInt(values.d6pool,10)||0;
+      let pp = parseInt(values.pp,10)||0;
+      ++d6pool;
+      --pp;
+      setAttrs({
+        d6pool: d6pool,
+        pp: pp
+      });
+    });
+  });
+
+  on("clicked:opppush", function() {
+    getAttrs(["d8pool", "pp"], function(values) {
+      let d8pool = parseInt(values.d8pool,10)||0;
+      let pp = parseInt(values.pp,10)||0;
+      ++d8pool;
+      --pp;
+      setAttrs({
+        d8pool: d8pool,
+        pp: pp
+      });
+    });
+  });
+
+// makes the "Opportunity Stunt" button work
+  on("clicked:oppstunt", function() {
+    getAttrs(["d10pool", "pp"], function(values) {
+      let d10pool = parseInt(values.d10pool,10)||0;
+      let pp = parseInt(values.pp,10)||0;
+      ++d10pool;
+      --pp;
+      setAttrs({
+        d10pool: d10pool,
+        pp: pp
+      });
+    });
+  });
+
+// makes the "Create Resource" button work
+
+  on("clicked:createresource", function() {
+    getAttrs(["pp"], function(values) {
+      let pp = parseInt(values.pp,10)||0;
+      --pp;
+      setAttrs({
+        pp: pp
+      });
+    });
+  });
+
+// make the "+XXP" buttons work
+  on("clicked:xp1", function() {
+    getAttrs(["xp"], function(values) {
+      let xp = parseInt(values.xp,10)||0;
+      ++xp;
+      setAttrs({
+        xp: xp,
+      });
+    });
+  });
+
+  on("clicked:xp3", function() {
+    getAttrs(["xp"], function(values) {
+      let xp = parseInt(values.xp,10)||0;
+      xp = xp + 3;
+      setAttrs({
+        xp: xp,
+      });
+    });
+  });
+
+  on("clicked:xp10", function() {
+    getAttrs(["xp"], function(values) {
+      let xp = parseInt(values.xp,10)||0;
+      xp = xp + 10;
+      setAttrs({
+        xp: xp,
+      });
+    });
+  });
+
+// makes the "1XP -> 1PP" button work
   on("clicked:buypp", function() {
     getAttrs(["xp", "pp"], function(values) {
+      let xp = parseInt(values.xp,10)||0;
+      let pp = parseInt(values.pp,10)||0;
       if (xp > 0) {
-        let newXp = parseInt(values.xp,10)||0;
-        let newPp = parseInt(values.pp,10)||0;
-        --newXp;
-        ++newPp;
+        --xp;
+        ++pp;
         setAttrs({
-          xp: newXp,
-          pp: newPp
+          xp: xp,
+          pp: pp
         });
       };
     });
