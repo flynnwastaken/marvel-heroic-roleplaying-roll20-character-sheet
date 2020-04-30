@@ -1,36 +1,48 @@
-/* configure the tab buttons */
-.sheet-stats,
-.sheet-details {
+/*-------------------------------------------------*\
+	# SHEET STRUCTURE
+\*-------------------------------------------------*/
+
+/* hide the tabs unless tab buttons selected */
+.sheet-stats, .sheet-details {
 	display: none;
 }
 
 /* show the selected tab and structuring of grids */
-.sheet-tabstoggle[value="stats"] ~ div.sheet-stats, {
+.sheet-tabstoggle[value="stats"] ~ div.sheet-stats {
 	display: grid;
-	grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-	grid-template-rows: 3fr 2fr 2fr 2fr 2fr 2fr 2fr 2fr 2fr 2fr 2fr min-content
-		min-content min-content 2fr min-content min-content min-content min-content
-		2fr min-content 2fr 2fr 2fr 2fr 2fr 2fr 2fr 2fr 2fr 2fr;
-	justify-items: center;
-	align-items: center;
+	grid-template-columns: 95px 95px 95px 95px 95px 95px 95px 95px;
+	grid-template-rows: 3fr 2fr 2fr 2fr 2fr 2fr 2fr 2fr 2fr 2fr 2fr fit-content()
+		fit-content() fit-content() 2fr fit-content() fit-content() fit-content() fit-content()
+		2fr fit-content() 2fr 2fr 2fr 2fr 2fr 2fr 2fr 2fr 2fr;
+	justify-content: center;
+	background-image: linear-gradient(to left top, #6b7d97, #364e6c);
+	background-size: 840px;
+	background-repeat: no-repeat;
+	background-position: center;
 }
 
 .sheet-tabstoggle[value="details"] ~ div.sheet-details {
 	display: grid;
-	grid-template-columns: 1fr 1fr 2fr;
-	grid-template-rows: 3fr 16fr;
-
+	grid-template-columns: 190px 190px 380px;
+	grid-template-rows: 100px 750px;
+	justify-content: center;
+	background-image: linear-gradient(to right top, #6b7d97, #364e6c);
+	background-size: 840px;
+	background-repeat: no-repeat;
+	background-position: center;
 }
 
-/* laying out the grid elements */
+/* laying out the grid elements on the first tab */
 
 .sheet-heroname { grid-area: 1/1/2/3; }
 
 .sheet-heroname_query { grid-area: 1/3/2/7; }
 
+
 .sheet-powerpoints { grid-area: 1/7/2/8; }
 
 .sheet-ppcounter { grid-area: 1/8/2/9; }
+
 
 .sheet-dicepool{ grid-area: 2/1/3/3; }
 
@@ -46,31 +58,34 @@
 
 .sheet-poolbuttons { grid-area: 2/8/3/9; }
 
-.sheet-distinctions { grid-area: 3/1/4/3; }
 
-.sheet-dis1 {	grid-area: 3/3/4/7; }
+.sheet-affiliations { grid-area: 3/1/4/3; }
 
-.sheet-dis2 { grid-area: 4/3/5/7; }
+.sheet-solo { grid-area: 3/3/4/5; }
 
-.sheet-d4distinction { grid-area: 4/7/5/8; }
+.sheet-buddy { grid-area: 3/5/4/7; }
 
-.sheet-d8distinction { grid-area: 4/8/5/9; }
+.sheet-team { grid-area: 3/7/4/9; }
 
-.sheet-dis3 { grid-area: 5/3/6/7; }
+.sheet-d6affiliaton { grid-area: 4/4/5/5; }
 
-.sheet-affiliations { grid-area: 6/1/7/3; }
+.sheet-d8affiliation { grid-area: 4/5/5/6; }
 
-.sheet-solo { grid-area: 6/3/7/5; }
+.sheet-d10affiliation { grid-area: 4/6/5/7; }
 
-.sheet-buddy { grid-area: 6/5/7/7; }
 
-.sheet-team { grid-area: 6/7/7/9; }
+.sheet-distinctions { grid-area: 5/1/6/3; }
 
-.sheet-d6affiliaton { grid-area: 7/4/8/5; }
+.sheet-dis1 {	grid-area: 5/3/6/7; }
 
-.sheet-d8affiliation { grid-area: 7/5/8/6; }
+.sheet-dis2 { grid-area: 6/3/7/7; }
 
-.sheet-d10affiliation { grid-area: 7/6/8/7; }
+.sheet-dis3 { grid-area: 7/3/8/7; }
+
+.sheet-d4distinction { grid-area: 7/7/8/8; }
+
+.sheet-d8distinction { grid-area: 7/8/8/9; }
+
 
 .sheet-stress { grid-area: 8/1/9/3; }
 
@@ -80,6 +95,7 @@
 
 .sheet-estress { grid-area: 8/7/9/9; }
 
+
 .sheet-trauma { grid-area: 9/1/10/3; }
 
 .sheet-ptrauma { grid-area: 9/3/10/5; }
@@ -88,13 +104,14 @@
 
 .sheet-etrauma { grid-area: 9/7/10/9; }
 
+
 .sheet-powersets { grid-area: 10/3/11/7; }
 
 .sheet-psname1 { grid-area: 11/2/12/4; }
 
-.sheet-levelpower1 { grid-area: 12/1/13/8; }
+.sheet-levelpower1 { grid-area: 12/1/13/5; }
 
-.sheet-powerbutton1 { grid-area: 12/8/13/9; }
+.sheet-powerbutton1 { grid-area: 12/5/13/9; }
 
 .sheet-sfx1 { grid-area: 13/1/14/9; }
 
@@ -102,101 +119,223 @@
 
 .sheet-psname2 { grid-area: 15/2/16/4; }
 
-.sheet-levelpower2 { grid-area: 16/1/17/8; }
+.sheet-levelpower2 { grid-area: 16/1/17/5; }
 
-.sheet-powerbutton2 { grid-area: 16/8/17/9; }
+.sheet-powerbutton2 { grid-area: 16/5/17/9; }
 
 .sheet-sfx2 { grid-area: 17/1/18/9; }
 
 .sheet-limit2 { grid-area: 18/1/19/9; }
 
-.sheet-specialties { grid-area: 19/1/20/3; }
 
-.sheet-specrating { grid-area: 19/3/20/8; }
+.sheet-specialties { grid-area: 19/1/20/2; }
 
-.sheet-specdice { grid-area: 19/8/20/9; }
+.sheet-specrating { grid-area: 19/2/20/5; }
 
-.sheet-push { grid-area: 20/1/21/3; }
+.sheet-specdice { grid-area: 19/6/20/9; }
 
-.sheet-pushdice { grid-area: 20/3/21/5; }
 
-.sheet-stunt { grid-area: 20/5/21/7; }
+.sheet-push { grid-area: 20/1/21/2; }
 
-.sheet-stuntdice { grid-area: 20/7/21/9; }
+.sheet-pushdice { grid-area: 20/2/21/5; }
 
-.sheet-resources { grid-area: 21/1/22/3; }
+.sheet-stunt { grid-area: 20/5/21/6; }
 
-.sheet-resourcenames { grid-area: 21/3/22/8; }
+.sheet-stuntdice { grid-area: 20/6/21/9; }
+
+
+.sheet-resources { grid-area: 21/1/22/2; }
+
+.sheet-resourcenames { grid-area: 21/2/22/8; }
 
 .sheet-resourcebuttons { grid-area: 21/8/22/9; }
 
-.sheet-milestones	{ grid-area: 22/3/23/7; }
 
-.sheet-msname1 { grid-area: 23/2/24/4; }
+.sheet-milestones { grid-area: 22/1/23/2; }
 
-.sheet-1xpbutton1 { grid-area: 24/1/25/2; }
+.sheet-msname1 { grid-area: 22/2/23/4; }
 
-.sheet-trigger11 { grid-area: 24/2/25/9; }
+.sheet-1xpbutton1 { grid-area: 23/2/24/3; }
 
-.sheet-3xpbutton1 { grid-area: 25/1/26/2; }
+.sheet-trigger11 { grid-area: 23/3/24/9; }
 
-.sheet-trigger13 { grid-area: 25/2/26/9; }
+.sheet-3xpbutton1 { grid-area: 24/2/25/3; }
 
-.sheet-10xpbutton1 { grid-area: 26/1/27/2; }
+.sheet-trigger13 { grid-area: 24/3/25/9; }
 
-.sheet-trigger110 { grid-area: 26/2/27/9; }
+.sheet-10xpbutton1 { grid-area: 25/2/26/3; }
 
-.sheet-msname2 { grid-area: 27/2/28/4; }
+.sheet-trigger110 { grid-area: 25/3/26/9; }
 
-.sheet-1xpbutton2 { grid-area: 28/1/29/2; }
+.sheet-msname2 { grid-area: 26/2/27/4; }
 
-.sheet-trigger21 { grid-area: 28/2/29/9; }
+.sheet-1xpbutton2 { grid-area: 27/2/28/3; }
 
-.sheet-3xpbutton2 { grid-area: 29/1/30/2; }
+.sheet-trigger21 { grid-area: 27/3/28/9; }
 
-.sheet-trigger23 { grid-area: 29/2/30/9; }
+.sheet-3xpbutton2 { grid-area: 28/2/29/3; }
 
-.sheet-10xpbutton2 { grid-area: 30/1/31/2; }
+.sheet-trigger23 { grid-area: 28/3/29/9; }
 
-.sheet-trigger210 { grid-area: 30/2/31/9; }
+.sheet-10xpbutton2 { grid-area: 29/2/30/3; }
 
-.sheet-xp { grid-area: 31/3/32/5; }
+.sheet-trigger210 { grid-area: 29/3/30/9; }
 
-.sheet-xpcounter { grid-area: 31/5/32/6; }
 
-.sheet-buypp { grid-area: 31/6/32/7; }
+.sheet-xp { grid-area: 31/5/32/7; }
 
-/* text and other styling */
+.sheet-xpcounter { grid-area: 31/7/32/8; }
 
-input[type="text"] {
-	width: 100%;
+.sheet-buypp { grid-area: 31/8/32/9; }
+
+
+/* laying out the grid elements on the second tab */
+
+.sheet-secretpublic { grid-area: 1/2/2/3; }
+
+.sheet-identity { grid-area: 1/3/2/4; }
+
+.sheet-history { grid-area: 2/1/3/3; }
+
+.sheet-personality  { grid-area: 2/3/3/4; }
+
+/*-------------------------------------------------*\
+	# GENERAL
+\*-------------------------------------------------*/
+
+/* ------- Inputs ------- */
+
+input[type="number"] {
+	margin: 5px;
+	font-weight: bold;
 }
 
 input.sheet-name {
-  display: block;
-  margin: 0;
-  width: 100%;
-  font-family: Arial;
+  margin: 8px;
+  width: 18em;
+	text-transform: uppercase;
+  font-family: Candal;
 	font-weight: bolder;
-  font-size: 18px;
-  appearance: none;
-  box-shadow: none;
-  border-radius: none;
-  border-width: 7px;
+  font-size: 20px;
+	background-color: #173f61;
+	color: white;
 }
 
 input.sheet-sub_name {
-  display: block;
-  margin: 0;
-  width: 100%;
+  margin-left: 2px;
+	margin-right: 2px;
+  width: 8em;
+	text-transform: uppercase;
   font-family: Contrail One;
-  font-size: 14px;
-  appearance: none;
-  box-shadow: none;
-  border-radius: none;
-  border-width: 4px;
+  font-size: 18px;
+	background-color: #193855;
+	color: white;
 }
 
+input.sheet-description {
+	margin: 4px;
+	width: 31em;
+	font-size: 12px;
+	font-weight: bold;
+	background-color: #002240;
+	color: white;
+}
+
+input.sheet-long_description {
+	margin: 4px;
+	width: 43em;
+	font-size: 12px;
+	font-weight: bold;
+	background-color: #002240;
+	color: white;
+}
+
+/* ------- Textareas ------- */
+
+textarea {
+	margin-left: 5px;
+	width: 340px;
+	height: 300px;
+	font-size: 12px;
+	font-weight: bold;
+	background-color: #002240;
+	color: white;
+}
+
+textarea.sheet-tall {
+	margin-left: 5px;
+	width: 340px;
+	height: 655px;
+	font-size: 12px;
+	font-weight: bold;
+	background-color: #002240;
+	color: white;
+}
+
+textarea.sheet-short {
+	margin: 4px;
+	margin-top: 7px;
+	width: 43em;
+	height: 16px;
+	font-size: 12px;
+	font-weight: bold;
+	background-color: #002240;
+	color: white;
+}
+
+/* ------- Selects ------- */
+
 select {
-	width: 180px;
+	margin: 4px;
+	width: 175px;
+	background-color: yellow;
+	font-weight: bold;
+}
+
+select.sheet-small {
+	margin: 4px;
+	width: 90px;
+	background-color: yellow;
+	font-weight: bold;
+}
+
+select.sheet-medium {
+	width: 140px;
+	background-color: yellow;
+	font-weight: bold;
+}
+
+/* ------- Text ------- */
+
+h1 {
+	font-family: Candal;
+	text-transform: uppercase;
+	font-size: 25px;
+	color: white;
+}
+
+p, strong, label {
+	font-family: Candal;
+	color: white;
+}
+
+h2 {
+	margin: 2px;
+	font-size: 16px;
+	font-family: Contrail One;
+	text-transform: uppercase;
+	color: white;
+}
+
+/* ------- Buttons ------- */
+
+button {
+	margin: 4px;
+	padding: 5px 7px;
+	text-align: center;
+	font-family: Candal;
+	font-size: 13px;
+	text-transform: uppercase;
+	background-color: yellow;
+	color: black;
 }
