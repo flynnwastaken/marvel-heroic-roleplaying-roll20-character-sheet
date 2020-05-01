@@ -2,9 +2,13 @@
 
 This is my attempt to create a character sheet for use in Roll20 for the Marvel Heroic Roleplaying system
 
-Version 0.5
+Version 1.0
 
 # Changelog: #
+## 1.0 ##
+* Added NPC tab
+* Added Doom Pool tab
+* Added 'keep highest 2' roll
 ## 0.5 ##
 * Added internationalization support
 * Added lots of styling
