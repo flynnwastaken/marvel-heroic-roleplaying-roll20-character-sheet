@@ -2,7 +2,8 @@
 	"html": "character-sheet.html",
 	"css": "character-sheet.css",
 	"authors": "Flynn B.",
+	"patreon": "https://www.patreon.com/flynnwastaken",
 	"roll20userid": "1969239",
-	"preview": "",
+	"preview": "https://github.com/flynnwastaken/marvel-heroic-roleplaying-roll20-character-sheet/blob/master/SheetPreview.png",
 	"instructions": "Most buttons add dice to the dice pool, which is then rolled by the 'Roll Pool' button. View the code and make requests at https://github.com/flynnwastaken/marvel-heroic-roleplaying-roll20-character-sheet/. Please enjoy!"
 }
