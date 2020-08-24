@@ -2,9 +2,13 @@
 
 This is my attempt to create a character sheet for use in Roll20 for the Marvel Heroic Roleplaying system
 
-Version 1.0.1
+Version 1.1
 
 # Changelog: #
+## 1.1 ##
+* Added dropdown to note stepped back, stepped up, and shut down power traits
+* Changed some incorrect terminology
+* Fixed an error in the translation JSON
 ## 1.0.1 ##
 * Fixed NPC sheet repeating section bug 
 ## 1.0 ##
